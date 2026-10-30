@@ -10,6 +10,15 @@ ghost text you explicitly accept or dismiss — nothing is written until you acc
 It registers a `fim` **model slot**, so `:AmiModel` lists it and you can point it at
 any model LM Studio has loaded; if you don't, it inherits ami's default model.
 
+## Demo
+
+Comment-driven completion — write a comment, trigger (`<C-g>`), accept (`<Tab>`):
+
+![inline completion demo](demos/inline.gif)
+
+> Rendered from [`demos/inline.tape`](demos/inline.tape); see
+> [`demos/README.md`](demos/README.md) to (re)generate it.
+
 ## Requirements
 
 - [ami.nvim](https://github.com/moosch/ami.nvim) (provides the extension + model
