@@ -1,7 +1,7 @@
 -- ami-inline: native Copilot-style ghost-text (FIM) completion for ami.
 --
 -- Extracted from ami core into its own extension repo. Talks directly to LM Studio's
--- /v1/completions endpoint (not through amid) to keep latency low. Manual trigger by
+-- /v1/completions endpoint to keep latency low. Manual trigger by
 -- default; optional debounced auto-trigger. Advisor ethos preserved: suggestions are
 -- ghost text you explicitly accept or dismiss — nothing is written until you accept.
 --
