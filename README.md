@@ -35,7 +35,6 @@ register it:
 {
   "moosch/ami.nvim",
   dependencies = { "moosch/ami-inline.nvim" },
-  build = "make build",
   config = function()
     require("ami").setup({
       extensions = { require("ami-inline") },
