@@ -353,6 +353,17 @@ return {
       set = function(m) api.config.model = m end,
     })
 
+    api.health(function(report)
+      local eff = api.models.effective("fim")
+      report.info(("fim model: %s @ %s"):format(tostring(eff.model), tostring(eff.endpoint)))
+      report.info(("auto-trigger: %s · prewarm: %s"):format(tostring(api.config.auto), tostring(api.config.prewarm)))
+      if vim.fn.executable("curl") == 1 then
+        report.ok("curl present (inline talks to the provider directly)")
+      else
+        report.error("curl not found — inline completion needs it")
+      end
+    end)
+
     vim.api.nvim_set_hl(0, "AmiInlineGhost", { link = "Comment", default = true })
 
     local km = api.config.keymaps or {}
